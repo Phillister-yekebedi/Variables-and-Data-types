@@ -1,13 +1,29 @@
-fun main(args: Array<String>) {
-    var name = arrayOf("yekebediTech", "bathsheba", "abigael", "methuselah")
-    println(name)
-    var age = arrayOf(22, 18, 10, 13)
-    println(age)
-    var phonenumber = arrayOf(71355728, 726855987, 798814633)
-    println(phonenumber)
-    var weight = arrayOf(60, 70, 28, 20)
-    println(weight)
-    var citizenship = arrayOf("kenyan", "tanzania", "ugandan", "kenyan")
+fun main() {
+    greetMe("Yekebedi")
+    modulus(111,4)
+   var r = addition( 55, 22, 66, 9 )
+    println(r)
+    intresringfact("yekebedi")
 
 
 }
+fun greetMe(name: String){
+    println("Hello "+name )
+}
+
+fun modulus(num1: Int, num2: Int){
+    var modulus = (num1 % num2)
+    println(modulus)
+
+}
+
+fun addition(num1: Int,num2: Int, num3: Int, num4: Int): Int{
+    var sum = num1 + num2 + num3 + num4
+    return sum
+
+
+}
+fun intresringfact(name: String){
+    println("i am energetic and positive" +name )
+}
+
