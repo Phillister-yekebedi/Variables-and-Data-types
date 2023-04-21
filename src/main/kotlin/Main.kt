@@ -23,8 +23,12 @@ fun main() {
     println(s)
     var m = lens("HopperLab")
     println(m)
-
-
+    arr(arrayOf(10,14,32,6,43,2,75,8))
+    pract(arrayOf("Miriam","Yeke","Rabecca","jebet","Ngugi","Amakove"))
+    girls(arrayOf("Ada", "Beth", "Chris", "Diana", "Elsie", "Fiona"))
+    sorting(arrayOf("Shadrack", "Primary","College","Training" ))
+    rays(arrayOf("Myles", "Kimbo", "Susan", "Wendy"))
+    println(arrayOf(names("I am here","but not for long","we all won't make it out alive ")))
 
 
 
@@ -107,6 +111,48 @@ fun thatMe(names1: String){
     }
 
 }
+//                                                       ARRAYS
+fun arr(numArray:Array<Int>){
+    println(numArray[3])
+    println(numArray[1])
+    println(numArray[2])
+    println(numArray[4])
+}
+fun pract(nameArray:Array<String>){
+    println(nameArray[4])
+    println(nameArray[3])
+    println(nameArray[0])
+}
+fun girls(namesArray: Array<String>){
+//    var namesArray= arrayOf("Ada", "Beth", "Chris", "Diana", "Elsie","Fiona")
+    println(namesArray.get(4))  //.get is an inbuilt function that gets an element at a certain index.
+    namesArray.plus("maureen")
+}
+fun sorting(school: Array<String>) {
+    for (n in school){
+        println(n)
+    }
+}
+//Create a function that takes in 4 strings and creates an array out of them then
+//prints out the array
+fun rays( word:Array<String>){
+    println(word.contentToString())
+
+}
+//Create a function that takes in 3 names and returns a string array containing
+//all 3 names.
+fun names(name1:String,names2: String,name3: String):String{
+    var person = arrayOf(name1, names2, name3)
+    return person.contentToString()
+
+
+
+
+
+
+}
+
+
 
 
 
