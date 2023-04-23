@@ -1,3 +1,5 @@
+import java.util.EnumMap
+import javax.management.MBeanRegistration
 
 fun main() {
     greetMe("World")
@@ -29,6 +31,18 @@ fun main() {
     sorting(arrayOf("Shadrack", "Primary","College","Training" ))
     rays(arrayOf("Myles", "Kimbo", "Susan", "Wendy"))
     println(arrayOf(names("I am here","but not for long","we all won't make it out alive ")))
+    var car= Car("Mercedes", "E-class","KBY564",0)
+    car.start()
+    println(car.speed)
+    println(car.accelerate(50))
+    var human = Human("Abigael", 20, 60.6)
+    human.eat(10)
+    human.birthday()
+    var user = User("Joyce", "Njeri","Joyce@gmail.com","713557278","34565")
+    println(user.email)
+    println(user.pasword)
+
+
 
 
 
@@ -145,15 +159,36 @@ fun names(name1:String,names2: String,name3: String):String{
     var person = arrayOf(name1, names2, name3)
     return person.contentToString()
 
-
-
-
-
-
+}
+//Classes
+class Car(var make:String, var model:String, var registration: String, var speed: Int){
+   fun start() {
+       print("I am starting")
+   }
+    fun accelerate(acceleration: Int): Int{
+        speed = speed + acceleration
+        return speed
+    }
 }
 
+class Human(var name: String, var age: Int, var weight: Double ){
+    fun eat(foodWeight: Int){
+        weight += foodWeight
+        println("I am eating $weight kgs of food")
 
+    }
+    fun speak(speech:String){
+        println("i will practice until i make perfect")
+    }
+    fun birthday(){
+        age+=1
+        println(age)
+    }
 
+}
+ class User(var firstname: String,var lastName: String, var email: String, var PhoneNumber: String, var pasword:String){
+
+ }
 
 
 
